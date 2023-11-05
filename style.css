@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: -20px;
+    padding-left: 8%; 
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: linear-gradient(to right, #ff99ff 0%, #33ccff 100%);
+    
+}
+    
+.navbar{    
+    width: 100%;
+    display: flex;
+    padding-top: 50px;
+    padding-left: 10px;
+    font-size: x-large;
+    
+}
+
+
+.logo {
+    width: 100px;
+    cursor: pointer; 
+    margin-top: -40px;
+  
+} 
+
+
+.menu-icon{
+     width: 50px;
+     height: 45px;
+     cursor: pointer;
+     display: none;
+     z-index: 3;
+}
+        
+nav{
+    flex: 1;
+    text-align: right;
+    
+}
+
+nav ul li {
+    list-style: none; 
+    display: inline-block;
+    margin-right: 30px;
+}
+        
+ nav ul li a{
+      text-decoration: none;
+      color: #000000;
+      font-size: 34px;
+}
+
+nav ul li a:hover{
+    color: #ca4848;
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+    position: relative;
+    top: -20px;
+}
+
+.col-1{
+    flex-basis: 35%;
+    position: relative;
+    margin-left:  50px;
+  
+}
+
+.col-1 h2{
+    font-size: 54px;
+}
+
+.col-1 h3{
+    font-size: 30px;
+    color:#707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+.col-1 h4{
+    font-size: 16px;
+    color: #b7b7b7;
+    font-weight: 100;
+}
+.col-1 h4{
+
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline:none;
+    color:#fff;
+    background: linear-gradient( to right,#fb5283,#ff3527);
+    border-radius: 6px;
+    cursor: pointer;
+    transition:width 0.5s;
+    
+}
+button img{
+    width: 30px;
+    display: none;
+}
+button:hover img{
+    display: block;
+}
+
+button:hover{
+    width:160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-1::after{
+    content:'';
+    width:10px;
+    height: 57%;
+    background: linear-gradient(#ff469f, #ff6062);
+    position:absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-2{
+    position:relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    margin-right: 0px;
+    justify-content: flex-end;
+    
+    
+}
+.col-2 .controller{
+    width: 100%;
+   margin-right: -70px;
+
+}
+.color-box{
+    position: absolute;
+    right: -1px;
+    margin-right: -120px;
+    margin-bottom: -16px;
+    height: 93%;
+    width: 260%;
+    z-index: -1;
+    transform: translateX(0);
+    background: linear-gradient(135deg, transparent 70%, #ef268b 70%);
+}
+
+.social-links{
+    position:absolute;
+    width: 100%;
+    margin-top: -25px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #9588be;
+}
+
+.social-links img{ 
+height: 20px; 
+margin: 20px;
+cursor: pointer;
+
+}
+
+.social-links img:hover {
+    transform: scale(2); 
+    transition: 0.5s;
+    color: rgb(123, 123, 214);
+    transform: scale(1.5);
+}
+
+@media only screen and (max-width:700px) {
+
+nav ul {
+width: 100%;
+position: absolute;
+top: 83px;
+right: 0;
+z-index: 2;
+background: radial-gradient(circle at 10% 20%, rgb(0, 143, 221) 0%, rgb(224, 119, 227) 0%, rgb(215, 223, 252) 84%);
+transition: max-height 0.5s!important;
+}
+
+nav ul li{
+display: block; 
+margin-top: 10px;
+margin-bottom: 10px;
+}
+  nav ul li a{
+color:#000000 ;
+}
+
+.menu-icon{
+    display: block;
+    
+   }
+   #menuList{
+    overflow: hidden;
+    transition: 0.5s;
+   }
+   .row{
+    flex-direction: column-reverse;
+    margin: 50px 0;
+   }
+   .col-2{
+    flex-basis: 100%;
+    margin-bottom: 50px;
+   }
+   .col-2.controller{
+    width: 77px;
+    padding-left: -30px;
+    margin-left: -50px;
+   }
+
+   .color-box{
+    transform: translateX(75px);
+   }
+   .col-1{
+    flex-basis: 100%;
+   }
+   .col-1 h2{
+    font-size: 35px;
+   }
+   .col-1 h3{
+    font-size:16px;
+   }
+}
+.blur-background::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 111, 126, 0.7); 
+    filter: blur(5px); 
+    z-index: 1; 
+    pointer-events: none; 
+    transition: all 0.3s; 
+}
